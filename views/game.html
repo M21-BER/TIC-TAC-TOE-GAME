@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIC TAC TOE - Play Game</title>
+    <link rel="stylesheet" href="../style/main.css" />
+    <link rel="stylesheet" href="../style/board.css" />
+    <link rel="shortcut icon" href="../asset/favicon.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="game-board">
+    <section class="wrapper flex-basic column">
+      <i class="v_o fa-solid" onclick="volume()"></i>
+      <div class="container relative-con  flex-basic">
+         <div class="backdrop"></div>
+        <h1 class="title font-anton">Tic Tac Toe Game</h1>
+        <div class="gameBoard flex-basic">
+           <div class="strike"></div>
+          <div class="row flex-basic">
+            <div class="c1 col flex-basic font-margarine" name="c1"></div>
+            <div class="c2 col flex-basic font-margarine middle-col" name="c2"></div>
+            <div class="c3 col flex-basic font-margarine" name="c3"></div>
+          </div>
+          <div class="row flex-basic middle-row">
+            <div class="c4 col flex-basic font-margarine" name="c4"></div>
+            <div class="c5 col flex-basic font-margarine middle-col" name="c5"></div>
+            <div class="c6 col flex-basic font-margarine" name="c6"></div>
+          </div>
+          <div class="row flex-basic">
+            <div class="c7 col flex-basic font-margarine" name="c7"></div>
+            <div class="c8 col flex-basic font-margarine middle-col" name="c8"></div>
+            <div class="c9 col flex-basic font-margarine" name="c9"></div>
+          </div>
+        </div>
+        <div class="btns">
+          <button class="btn font-margarine" onclick="resetGame()">
+            <i class="fa-solid fa-rotate-right "></i> <span>Reset Game</span>
+          </button>
+          <button class="btn font-margarine" onclick="restartGame()">
+            <i class="fa-solid fa-house"></i> Restart Game</span>
+          </button>
+        </div>
+      </div>
+       <h2 class="bottom_display font-margarine"></h2>
+       <div class="after_game_panel flex-basic">
+        <h1 class="game_end_text font-jost">GAME ENDED</h1>
+        <h2 class="winner font-jost"></h2>
+        <h3 class="after_game_panel_text font-margarine"><i class="fa-solid fa-face-grin-wide"></i> <span></span></h3>
+        <div class="btns">
+          <button class="btn font-margarine" onclick="resetGame()">
+            <i class="fa-solid fa-rotate-right"></i> <span>Reset Game</span>
+          </button>
+          <button class="btn font-margarine" onclick="restartGame()">
+            <i class="fa-solid fa-house"></i> Restart Game</span>
+          </button>
+        </div>
+       </div>
+       <audio id="myAudio" style="display: none;">
+        <source src="../sounds/game_time.m4a" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+    <script src="../js/main.js"></script>
+    <script src="../js/computer.js"></script>
+    <script src="../js/friend.js"></script>
+  </body>
+</html>

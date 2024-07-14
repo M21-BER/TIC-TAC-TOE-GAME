@@ -1,0 +1,67 @@
+function onInputPageLoad() {
+  const mode = getUrlParams().get("mode");
+  if (!mode && !available_modes.includes(mode)) {
+    window.location = "../index.html";
+  } else {
+    player_mode = mode;
+  }
+}
+
+var boxes = {
+  box1: "",
+  box2: "",
+  box3: "",
+  box4: "",
+  box5: "",
+  box6: "",
+  box7: "",
+  box8: "",
+  box9: "",
+};
+
+const target = document.querySelector(".container");
+const container = document.querySelector(".wrapper");
+const callBack = () => {
+  sound("../sounds/entrance.m4a").play();
+};
+
+const options = {
+  root: container,
+  threshold: 1,
+};
+const observer = new IntersectionObserver(callBack, options);
+
+observer.observe(target);
+
+// window.addEventListener("DOMContentLoaded", (event) => {
+//   // const audio = document.querySelector("audio");
+//   // audio.volume = 0.2;
+//   // audio.play();
+//   // sound("../sounds/entrance.m4a").play();
+// });
+if (document.querySelector("body.game-board")) {
+    const mode_from_url = getUrlParams().get("mode");
+    if (!available_modes.includes(mode_from_url)) {
+      window.history.back();
+    } else {
+      if (available_modes.includes(mode_from_url) == "friend") {
+        onGamePageLoadWithFriend();
+      } else {
+        onGamePageLoadWithComputer();
+      }
+    }
+  }
+
+  function addEventToBox(action, selection) {
+  const list = document.querySelectorAll(".col");
+  for (let i = 0; i < list.length; i++) {
+    list[i].addEventListener("click", function () {
+      if (!list[i].innerText) {
+        list[i].innerText = selection;
+        action();
+      } else {
+        wrongMove();
+      }
+    });
+  }
+}

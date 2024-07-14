@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIC TAC TOE - Settings</title>
+    <link rel="stylesheet" href="../style/main.css" />
+    <link rel="shortcut icon" href="../asset/favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body onload="loadSettings()">
+    <section class="wrapper flex-basic">
+      <div class="container flex-basic">
+        <i class="fa-solid fa-circle-left settings-back" onclick="goBack()"></i>
+        <h1 class="title font-anton">Tic Tac Toe Game</h1>
+        <div class="settings">
+          <div class="frame">
+            <h2 class="font-margarine">
+              Developed By <span>Musse Berhane</span>
+            </h2>
+            <p class="first_relase_date">
+              Start Version 0.0.1 Wed, Jul, 10, 2024
+            </p>
+            <p class="about font-anton">
+              <marquee behavior="" direction=""
+                >Innovative, task-driven professional with 3+ years of
+                experience in web design and software development across diverse
+                tech organizations. Equipped with a record of success in
+                consistency identifying and providing the technological needs of
+                companies through ingenious innovation. Proficient in developing
+                databases, creating user interfaces, writing and testing codes,
+                troubleshooting simple/complex issues, and implementing new
+                features based on user feedback.</marquee
+              >
+            </p>
+          </div>
+          <h3>Difficulty</h3>
+          <div class="radio-btn">
+            <label for="easy">Easy</label>
+            <input
+              type="radio"
+              class="font-margarine"
+              name="Easy"
+              id="easy"
+              onclick="level('easy')"
+            />
+            <label for="hard">Hard</label>
+            <input
+              type="radio"
+              class="font-margarine"
+              name="Hard"
+              id="hard"
+              onclick="level('hard')"
+            />
+          </div>
+        </div>
+        <small id="version"></small>
+      </div>
+    </section>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

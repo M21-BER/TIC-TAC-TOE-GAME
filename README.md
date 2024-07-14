@@ -5,7 +5,7 @@
 
 A game in which two players seek in alternate turns to complete a row, a column, or a diagonal with either three O's or three X's drawn in the spaces of a grid of nine squares; noughts and crosses. This version of tic tac toe game I developed supports player vs computer & player vs player mode.
 
-## [Play here](https://www.github.com/M21-BER)
+## [Play here](https://m21-ber.github.io/TIC-TAC-TOE-GAME/)
 
 
 
